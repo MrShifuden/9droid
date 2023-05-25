@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>9droid</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+font-family: Arial;
+margin: 0;
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+}
+.header {
+padding: 5px;
+text-align: center;
+background: coral;
+color: white;
+}
+
+.header {
+font-size: 20px;
+}
+
+.nav {
+overflow: hidden;
+background-color: #333;
+}
+
+.nav a {
+float: left;
+display: block;
+color: white;
+text-align: left;
+padding: 10px 20px;
+text-decoration: none;
+}
+
+.nav a:hover {
+background-color: coral;
+color: white;
+}
+
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 15px;
+margin-top: -22px;
+color: coral;
+background-color: #dbdbdb;
+font-weight: bold;
+font-size: 20px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+color: black;
+font-size: 20px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+.numbertext {
+color: coral;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: Coral;
+  color: white;
+}
+
+</style>
+</head>
+
+<body style="background-image: url('wallp.png');">
+
+<div class="header">
+<h1>9droid</h1>
+</div>
+
+<div class="nav">
+<a href="Home.html"><b>Home</a>
+<a href="Nery,DustineBSInfotech1B.html"><b>Product</a>
+<a href="AboutUs.html"><b>About Us</a>
+</div>
+<br>
+
+<bg color="#fab6c6">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+<p align="center"><img src="AK_W.png"></p>
+<div class="text">Arknights W Nendroid</div>
+</div>
+
+<div class="mySlides fade">
+<p align="center"><img src="AK_Chen.png"></p>
+<div class="text">Arknights Chen Nendroid</div>
+</div>
+
+<div class="mySlides fade">
+<p align="center"><img src="AK_Eyja.png"></p>
+<div class="text">Arknights Eyjafjalla Nendroid</div>
+</div>
+
+<div class="mySlides fade">
+<p align="center"><img src="AK_Saga.png"></p>
+<div class="text">Arknights Saga Nendroid</div>
+</div>
+
+<div class="mySlides fade">
+<p align="center"><img src="AK_Kal.png"></p>
+<div class="text">Arknights Kal'tsit Nendroid</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span> 
+<span class="dot" onclick="currentSlide(2)"></span> 
+<span class="dot" onclick="currentSlide(3)"></span> 
+<span class="dot" onclick="currentSlide(4)"></span> 
+<span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}    
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";  
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+<br>
+
+</body>
+
+<footer>
+<a href="file:///C:/Users/Dustin%20Marion/Downloads/9droid/Home.html"><img src="like.png" height="30px"></a>
+</footer>
+
+</html>
